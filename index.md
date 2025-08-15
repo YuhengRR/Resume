@@ -1,6 +1,6 @@
-# 欢迎来到梁昱恒的个人主页
+# 欢迎来到梁宇恒的个人主页
 
-你好，我是 **梁昱恒 (FreedomPuppy77)**，研究方向为 **维度情感识别（Valence-Arousal）** 与多模态 AI 系统，同时也参与过图纸解析和多模态问答系统项目。欢迎浏览我的科研成果和项目介绍。
+你好，我是 **梁宇恒**，研究方向为 **维度情感识别（Valence-Arousal）** 与多模态 AI 系统，同时也参与过图纸解析和多模态问答系统项目。欢迎浏览我的科研成果和项目介绍。
 
 ---
 
@@ -21,7 +21,8 @@
 
 1. **Charon: Multi-modal Valence-Arousal Estimation in-the-wild**  
    - [ArXiv 链接](https://arxiv.org/abs/2503.10104)  
-   - 第八届 ABAW VA Estimation Challenge 提交队伍名称：Charon  
+   - 第八届 ABAW VA Estimation Challenge 提交队伍名称：Charon
+   - [排行榜](https://affective-behavior-analysis-in-the-wild.github.io/8th/)  
 
 2. 其他论文或成果可以按时间顺序列出，附链接和简要说明。
 
