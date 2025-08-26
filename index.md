@@ -1,61 +1,91 @@
-# 欢迎来到梁宇恒的个人主页
+# Resume
+📧 **邮箱**：1023010418@njupt.edu.cn | 📞 **电话**：+86 15212147511
 
-你好，我是 **梁宇恒**，研究方向为 **维度情感识别（Valence-Arousal）** 与多模态 AI 系统，同时也参与过图纸解析和多模态问答系统项目。欢迎浏览我的科研成果和项目介绍。
+面试官您好，我是 **梁宇恒**，就读南京邮电大学信号与信息处理专业，在智能信息处理与通信技术省高校重点实验室（智通实验室），研究生期间获得研究生学业一等奖学金。
 
----
+科研方面，主要研究方向为**多模态情感识别**，所提出方法在2025年第八届CVPRworkshop国际竞赛中获得**第六名**(全球75支队伍)，论文被收录CVPRworkshop。同时以第一作者身份发表多模态情感识别相关成果论文**3篇**。
 
-## 🧪 科研方向
+项目实践方面，有过两段AI算法实习经历，熟悉主流的深度学习框架（PyTorch）、编程语言（Python/C++）、开发工具链（Linux、Shell、Docker），能够独立完成从方法设计、训练优化、微调到部署上线的完整流程。具备良好的问题分析能力、说明文档撰写能力、部门协作能力。
 
-- **维度情感识别（Valence-Arousal）**
-  - 使用 **二维情感模型** 进行情感预测
-  - 融合视觉与音频特征的 **多模态方法**
-  - 研究成果已在 **ABAW 竞赛** 和 **ArXiv** 上传
-
-- **心理健康预警应用**
-  - 基于 VA 预测值进行抑郁症检测研究
-  - 探索特征去噪方法，更好地提取情感相关信息
+本人衷心热爱人工人工智能领域研究与实践，具备扎实的**计算机视觉**、**多模态大模型**、**多模态RAG**等实践经验，具备从理论研究到工程化落地的能力链。下面是我科研成果与实践项目的详细说明，期待与您进一步沟通。
 
 ---
 
-## 📄 科研论文
+## 🧪 科研经历 2024.09-至今
 
-1. **Charon: Multi-modal Valence-Arousal Estimation in-the-wild**  
-   - [ArXiv 链接](https://arxiv.org/abs/2503.10104)  
-   - 第八届 ABAW VA Estimation Challenge 提交队伍名称：Charon
-   - [排行榜](https://affective-behavior-analysis-in-the-wild.github.io/8th/)  
+### **多模态情感识别算法(研究生课题)-国家自然基金项目**
+  - 项目描述:
+  情绪识别在加强人机交互和监测心理健康方面发挥着至关重要的作用。针对现有Valence-Arousal (VA) 情感识别任务中如何有效提取能反映情绪细微变化的判别特征，以及如何对多模态特征在空间和时间维度上的分布差异进行建模和调整，以充分利用模态之间的互补信息。设计了一种结合视觉与音频双模态信息的动态交叉注意力融合模型。
+  - 模型综述：如下图所示，框架整合了视觉和音频特征，通过`TCN`模块对每种模态中的时间动态和上下文信息进行建模，然后利用双向动态交叉模型注意模块（BDCA），自适应地捕捉模态之间的协同和互补关系，最后将融合后的特征经过`Transformers`，进一步提取多种尺度的深度语境表征。
+  ![模型框架](./images/模型框架图.png)
+  - MAE Encoder模块:
+  特征提取是多模态情感识别的基础，对模型表示原始情感数据的能力有重大影响。(待补充)
+  <!-- ![MAE Encoder](./images/MAE%20Encoder.png) -->
+  <img src="./images/MAE Encoder.png" alt="MAE" width="500"/>
 
-2. 其他论文或成果可以按时间顺序列出，附链接和简要说明。
+  - Bidirectional Dynamic Cross-model Attention模块:
+  (待补充, 图片需要调整)
+  <img src="./images/BDCA-update.png" alt="BDCA" width="500"/>
 
 ---
 
-## 🛠 项目展示
+### **科研成果**
+1. 📄 **Mamba-VA: A Mamba-based Approach for Continuous Emotion Recognition in Valence-Arousal Space**
+    - 第一作者, Conference on Computer Vision and Pattern Recognition Workshops(CVPRw)已发表
+    - [论文链接](https://arxiv.org/abs/2503.10104) 
+    - 第八届 ABAW VA Estimation Challenge 提交队伍名称：Charon
+    - [排行榜](https://affective-behavior-analysis-in-the-wild.github.io/8th/)
 
-### 1️⃣ 图纸解析项目
+2. 📄 **LightMamba: A Multimodal Audio-Visual Framework for Continuous Emotion Recognition**
+    - 第一作者, 2025 China Automation Congress(CAC)已录用
+    - [查看论文](./papers/LightMamba.pdf)
 
-- **项目简介**：通过 YOLOv5/YOLOv11 检测工程图纸中的剖面图、工装图、刻字图、压力曲线图及表格块  
-- **技术亮点**：
-  - 版面解析准确率 >95%
+3. 📄 **Enhancing Audio-Visual Affective Analysis via Bidirectional Dynamic Cross-Modal Attention and Masked Autoencoding**
+    - 第一作者, Wireless Communications and Signal Processing (WCSP)在投
+    - [查看论文](./papers/BidirectionalDynamicCross-ModalAttention.pdf)
+
+---
+
+## 实习经历 
+### 鼎捷数智股份有限公司(南京研发中心)-AI算法工程师 | 2025.05-2025-09
+#### 基于大模型的复杂工程图纸解析
+图(框架图)
+- **项目简介**：通过`YOLOv11`模型对工程图纸中的剖面图、工装图、刻字图/内容、压力图、文本块、表格块、切面图8个类别进行版面检测,对于不同类别通过微调后的Nanonets-OCR-s模型, 进行相应的分析总结.
+- **技术栈**: lableme->YOLOv11->Qwen2.5-vl->Nanonets-OCR-s->Llama Factory->
+- **主要工作**：
+  - 版面解析阶段, 不同类别的检测准确率在96%左右
   - 微调 Nanonets-OCR-s，实现表格和文字检测准确率 ~92%
-- **项目落地**：已部署在公司 AI 平台 IndepthAI
-
+- **项目难点**：通过Flask上线部署到公司自研IndepthAI平台.
+- **个人收获**: 通过方法调研, 确定技术路线, 对版面检测模型进行多次迭代优化, 以及对剖面图、工装图、刻字图/内容、压力图通过大模型微调, 能够详细对不同类别的图片进行总结, 并且能够精准提取相应的参数信息.
 ---
 
-### 2️⃣ 多模态 RAG 问答系统
+#### 多模态 RAG 问答系统
+![框架图](./images/framework.png)
+- **项目简介**：本项目旨在构建一个支持交互文本、表格和图片的多模态 RAG 问答系统。通过`Unstructured`解析 PDF 文档，抽取多模态元素并结合`Ollama LLM（Llama2、Qwen2.5-VL）`生成中文摘要，实现对文本和图像的统一语义表示。采用 `Chroma`向量库与`MultiVectorRetriever` 完成摘要检索与原文回溯，支持多模态统一问答与高效信息定位。系统主要应用于 汽车使用与保养手册，能够快速回答用户关于保养步骤、零部件信息及操作流程的问题，实现文档内容智能检索与辅助决策。  
+- **技术栈**：Unstructured/marker、Ollama、LangChain、Chroma、Tesseract OCR、Falsk
+- **主要工作**：
+  - 基于 Unstructured 完成 PDF 文档解析，抽取文本、表格及图片元素，实现结构化数据处理与统一索引。
+  - 使用 Ollama LLM（Llama2、Qwen2.5-VL）生成中文文本和图片摘要，支持扫描件 OCR 与复杂表格图像内容解析。  
+  - 构建 Chroma 向量库 + MultiVectorRetriever，实现“摘要向量检索 + 原文/路径回溯”，支持文本、表格和图片的统一多模态问答。
+  - 系统处理 10,000+ 文档及图像数据，检索延迟 <300ms，能够准确回答文档中二维码、表格及图片内容等问题。
+- **项目难点**：结构化数据提取, 文本和图片生成摘要提示词, 向量库构建, 检索策略
+- **个人收获**: 掌握了多模态信息抽取与 RAG 问答系统构建的全流程，实现跨模态知识检索与高效问答。提升了 LLM 调用、向量检索优化以及大规模文档处理能力，积累了复杂系统工程实践经验。
 
-- **项目简介**：实现文本、表格与图像的跨模态检索与问答  
-- **技术亮点**：
-  - 文本/表格嵌入使用 GPT4AllEmbeddings  
-  - 图片嵌入使用 CLIP  
-  - 支持跨模态检索，结合 LLava/GPT-4 生成回答
-- **应用场景**：企业文档检索、智能问答系统
-
+### 深研人工智能(深圳)有限公司-初级算法工程师 | 2024.07-2024.09
+#### 基于YOLOv5道路病害检测
+- **项目描述**: 
+- **主要工作**:
+- **项目难点**:
+- **个人收获**:
 ---
+
+
 
 ## 🔗 联系方式
 
 - GitHub: [https://github.com/FreedomPuppy77](https://github.com/FreedomPuppy77)  
 - 邮箱: your_email@example.com  
-
+- 电话：15212147511
 ---
 
 > ⚠️ 注：欢迎 HR 或导师点击链接查看项目代码与科研论文。
