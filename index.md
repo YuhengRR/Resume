@@ -35,13 +35,14 @@
     - [查看论文](./papers/Mamba-VA.pdf) 
     - 第八届 ABAW VA Estimation Challenge 提交队伍名称：Charon
     - [排行榜](https://affective-behavior-analysis-in-the-wild.github.io/8th/)
+    - [代码仓](https://github.com/YuhengRR/Charon)
 
 2. 📄 **LightMamba: A Multimodal Audio-Visual Framework for Continuous Emotion Recognition**
     - 第一作者, 2025 China Automation Congress(CAC)已录用
     - [查看论文](./papers/LightMamba.pdf)
 
 3. 📄 **Enhancing Audio-Visual Affective Analysis via Bidirectional Dynamic Cross-Modal Attention and Masked Autoencoding**
-    - 第一作者, Wireless Communications and Signal Processing (WCSP)在投
+    - 第一作者, 2025 Wireless Communications and Signal Processing (WCSP)在投
     - [查看论文](./papers/BidirectionalDynamicCross-ModalAttention.pdf)
 
 ---
@@ -57,6 +58,7 @@
   - 微调 Nanonets-OCR-s，实现表格和文字检测准确率 ~92%
 - **项目难点**：通过Flask上线部署到公司自研IndepthAI平台.
 - **个人收获**: 通过方法调研, 确定技术路线, 对版面检测模型进行多次迭代优化, 以及对剖面图、工装图、刻字图/内容、压力图通过大模型微调, 能够详细对不同类别的图片进行总结, 并且能够精准提取相应的参数信息.
+
 ---
 
 #### 多模态 RAG 问答系统
@@ -77,13 +79,16 @@
 - **主要工作**: 收集道路病害图片并使用FiftyOne进行标注; 完成模型搭建与训练, 通过实验对比不同超参数配置，有效提升检测精度到85%。
 - **项目难点**: 无人机拍摄的图片存在树枝、阴影投影到道路表面，容易引起模型误判为裂缝类病害。
 - **个人收获**: 提升了在真实场景下进行数据清洗、建模与调优的能力，具备从数据分析到系统落地的完整实践经验。
+
 ---
 
 ## 专业技能
+
+---
 
 ## 个人评价
 
 
 ---
 
-> ⚠️ 注：欢迎 HR 或导师点击链接查看项目代码与科研论文。
+> 从理论到工程，我的目标是让研究走向真实应用。
