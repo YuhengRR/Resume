@@ -1,5 +1,6 @@
 # Resume
 📧 **邮箱**：1023010418@njupt.edu.cn | 📞 **电话**：+86 15212147511
+<img src="./images/证件照.jpg" alt="头像" style="float: right; width: 100px; border-radius: 50%;">
 
 面试官您好，我是 **梁宇恒**，就读南京邮电大学信号与信息处理专业，在智能信息处理与通信技术省高校重点实验室（智通实验室），研究生期间获得研究生学业一等奖学金。
 
@@ -11,25 +12,36 @@
 
 ---
 
-## 科研经历 
-
+## 项目经历 
 ### **多模态情感识别算法(研究生课题)-国家自然基金项目** | 2024.09-至今
-  - 项目描述:
-  情绪识别在加强人机交互和监测心理健康方面发挥着至关重要的作用。针对现有Valence-Arousal (VA) 情感识别任务中如何有效提取能反映情绪细微变化的判别特征，以及如何对多模态特征在空间和时间维度上的分布差异进行建模和调整，以充分利用模态之间的互补信息。设计了一种结合视觉与音频双模态信息的动态交叉注意力融合模型。
-  - 模型综述：如下图所示，框架整合了视觉和音频特征，通过`TCN`模块对每种模态中的时间动态和上下文信息进行建模，然后利用双向动态交叉模型注意模块（BDCA），自适应地捕捉模态之间的协同和互补关系，最后将融合后的特征经过`Transformers`，进一步提取多种尺度的深度语境表征。
-  ![模型框架](./images/模型框架图.png)
-  - MAE Encoder模块:
-  特征提取是多模态情感识别的基础，对模型表示原始情感数据的能力有重大影响。(待补充)
-  <!-- ![MAE Encoder](./images/MAE%20Encoder.png) -->
-  <img src="./images/MAE Encoder.png" alt="MAE" width="500"/>
+- **项目描述**:
+情绪识别在加强人机交互和监测心理健康方面发挥着至关重要的作用。针对现有Valence-Arousal (VA) 情感识别任务中如何有效提取能反映情绪细微变化的判别特征，以及如何对多模态特征在空间和时间维度上的分布差异进行建模和调整，以充分利用模态之间的互补信息。设计了一种结合视觉与音频双模态信息的动态交叉注意力融合模型。
+- **模型综述**：如下图所示，框架整合了视觉和音频特征，通过`TCN`模块对每种模态中的时间动态和上下文信息进行建模，然后利用双向动态交叉模型注意模块（BDCA），自适应地捕捉模态之间的协同和互补关系，最后将融合后的特征经过`Transformers`，进一步提取多种尺度的深度语境表征。
+![模型框架](./images/模型框架图.png)
+- **MAE Encoder模块**:
+特征提取是多模态情感识别的基础，对模型表示原始情感数据的能力有重大影响。(待补充)
+<!-- ![MAE Encoder](./images/MAE%20Encoder.png) -->
+<img src="./images/MAE Encoder.png" alt="MAE" width="500"/>
 
-  - Bidirectional Dynamic Cross-model Attention模块:
-  (待补充, 图片需要调整)
-  <img src="./images/BDCA-update.png" alt="BDCA" width="500"/>
+- **Bidirectional Dynamic Cross-model Attention模块**:
+(待补充, 图片需要调整)
+<img src="./images/BDCA-update.png" alt="BDCA" width="500"/>
 
 ---
 
-### **科研成果**
+### **基于Mamba的连续情感识别算法（第八届 ABAW 竞赛）**
+- **项目介绍**：针对Valence-Arousal Estimation Challenge任务, 聚焦于多模态情感与行为分析任务。对视频中的人脸序列进行连续效价(Valence)与唤醒度(Arousal)预测，评估指标为 Concordance Correlation Coefficient (CCC)。
+- **技术方案**: 
+    - 采用 MAE (Masked Autoencoder) 提取高维视觉特征，并通过部分参数冻结策略增强泛化能力；
+    - 引入 Temporal Convolutional Network (TCN) 建模短期依赖，捕捉局部动态信息；
+    - 融合 Mamba (State Space Model) 进行长序列建模，实现全局情感趋势捕捉，同时兼顾计算效率与稳定性；
+- **成果表现**: 
+    - 在 Aff-Wild2 数据集 上，测试集平均 CCC = 0.458，显著优于官方 Baseline。
+    - 全球共有75支队伍参加, 获得第6名的成绩, 提出的方法被`CVPR 2025 Workshop`收录, 四个月论文被引用4次, 代码仓3个star。
+
+---
+
+## **学术成果**
 1. 📄 **Mamba-VA: A Mamba-based Approach for Continuous Emotion Recognition in Valence-Arousal Space**
     - 第一作者, Conference on Computer Vision and Pattern Recognition Workshops(CVPRw)已发表
     - [查看论文](./papers/Mamba-VA.pdf) 
@@ -63,13 +75,15 @@
 
 #### 多模态 RAG 问答系统
 ![框架图](./images/framework.png)
-- **项目简介**：本项目旨在构建一个支持交互文本、表格和图片的多模态 RAG 问答系统。通过`Unstructured`解析 PDF 文档，抽取多模态元素并结合`Ollama LLM（Llama2、Qwen2.5-VL）`生成中文摘要，实现对文本和图像的统一语义表示。采用 `Chroma`向量库与`MultiVectorRetriever` 完成摘要检索与原文回溯，支持多模态统一问答与高效信息定位。系统主要应用于 汽车使用与保养手册，能够快速回答用户关于保养步骤、零部件信息及操作流程的问题，实现文档内容智能检索与辅助决策。  
+- **项目简介**：针对上汽公司的汽车使用与保养的PDF，Image，office等文档，以Langchain为基础框架，Qwen2.5-VL为内核LLM，构建多模态RAG系统。
+
+本项目旨在构建一个支持交互文本、表格和图片的多模态 RAG 问答系统。通过`Unstructured`解析 PDF 文档，抽取多模态元素并结合`Ollama LLM（Llama2、Qwen2.5-VL）`生成中文摘要，实现对文本和图像的统一语义表示。采用 `Chroma`向量库与`MultiVectorRetriever` 完成摘要检索与原文回溯，支持多模态统一问答与高效信息定位。系统主要应用于汽车使用与保养手册，能够快速回答用户关于保养步骤、零部件信息及操作流程的问题，实现文档内容智能检索与辅助决策。  
 - **技术栈**：Unstructured/marker、Ollama、LangChain、Chroma、Tesseract OCR、Falsk
 - **主要工作**：
   - 基于 Unstructured 完成 PDF 文档解析，抽取文本、表格及图片元素，实现结构化数据处理与统一索引。
   - 使用 Ollama LLM（Llama2、Qwen2.5-VL）生成中文文本和图片摘要，支持扫描件 OCR 与复杂表格图像内容解析。  
   - 构建 Chroma 向量库 + MultiVectorRetriever，实现“摘要向量检索 + 原文/路径回溯”，支持文本、表格和图片的统一多模态问答。
-  - 系统处理 10,000+ 文档及图像数据，检索延迟 <300ms，能够准确回答文档中二维码、表格及图片内容等问题。
+  - 上线部署，能够准确回答文档中二维码、表格及图片内容等问题。
 - **项目难点**：结构化数据提取, 文本和图片生成摘要提示词, 向量库构建, 检索策略
 - **个人收获**: 掌握了多模态信息抽取与 RAG 问答系统构建的全流程，实现跨模态知识检索与高效问答。提升了 LLM 调用、向量检索优化以及大规模文档处理能力，积累了复杂系统工程实践经验。
 
@@ -83,6 +97,10 @@
 ---
 
 ## 专业技能
+- 熟悉Python/C++/C语言，熟练使用Shell等脚本工具语言，掌握计算机原理、数据结构与算法等核心基础理论。
+- 熟练使用Linux开发环境以及Docker、CMake、Git等开发工具。
+- 
+
 
 ---
 
