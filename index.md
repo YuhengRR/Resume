@@ -12,7 +12,7 @@
 
 科研方面，主要研究方向为**多模态情感识别**，所提出方法在2025年第八届CVPRworkshop国际竞赛中获得**第六名**(全球75支队伍)，论文被收录CVPRworkshop。同时以第一作者身份发表多模态情感识别相关成果论文**3篇**。
 
-项目实践方面，有过两段AI算法实习经历，熟悉主流的深度学习框架（PyTorch）、编程语言（Python/C++）、开发工具链（Linux、Shell、Docker），能够独立完成从方法设计、训练优化、微调到部署上线的完整流程。具备良好的问题分析能力、说明文档撰写能力、部门协作能力。
+实践方面，有过两段AI算法实习经历，熟悉主流的深度学习框架（PyTorch）、编程语言（Python/C++）、开发工具链（Linux、Shell、Docker），能够独立完成从方法设计、训练优化、微调到部署上线的完整流程。具备良好的问题分析能力、说明文档撰写能力、部门协作能力。
 
 本人衷心热爱人工人工智能领域研究与实践，具备扎实的**计算机视觉**、**多模态大模型**、**多模态RAG**等实践经验，具备从理论研究到工程化落地的能力链。下面是我科研成果与实践项目的详细说明，期待与您进一步沟通。
 
@@ -22,7 +22,7 @@
 ### 鼎捷数智股份有限公司(南京研发中心)-AI算法工程师 | 2025.05-2025-09
 #### 基于大模型的复杂工程图纸解析
 ![框架图](./images/Layout.png)
-- **项目简介**：开发基于大模型的工程图纸解析系统，利用YOLOv11进行版面检测（识别剖面图、工装图、刻字图/内容、压力曲线图、文本块、表格块、切面图等7类元素），并通过微调后的Nanonets-OCR-s模型对各类别进行针对性分析与总结，实现结构化数据提取。
+- **项目简介**：开发基于大模型的工程图纸解析系统，利用YOLOv11进行版面检测（识别剖面图、工装图、刻字图/内容、压力曲线图、文本块、表格块、切面图7类元素），并通过微调后的Nanonets-OCR-s模型对各类别进行针对性分析与总结，实现结构化数据提取。
 - **技术栈**: Labelme（数据标注） → YOLOv11（版面检测） → Nanonets-OCR-s & Llama Factory（模型微调与OCR分析） → MonkeyOCR（文本/表格提取） → Flask（API部署）。
 - **主要工作**：
   - 设计端到端工程图纸解析框架，针对复杂场景处理剖面图、工装图、刻字图、压力曲线图、文本块、表格块六类元素。
@@ -61,36 +61,33 @@
 
 ## 项目经历 
 ### **国家自然基金项目-多模态情感识别算法(研究生课题)** | 2024.09-至今
-- **项目描述**:
-情绪识别在加强人机交互和监测心理健康方面发挥着至关重要的作用。针对现有Valence-Arousal (VA) 情感识别任务中如何有效提取能反映情绪细微变化的判别特征，以及如何对多模态特征在空间和时间维度上的分布差异进行建模和调整，以充分利用模态之间的互补信息。设计了一种结合视觉与音频双模态信息的动态交叉注意力融合模型。
-- **模型综述**：如下图所示，框架整合了视觉和音频特征，通过`TCN`模块对每种模态中的时间动态和上下文信息进行建模，然后利用双向动态交叉模型注意模块（BDCA），自适应地捕捉模态之间的协同和互补关系，最后将融合后的特征经过`Transformers`，进一步提取多种尺度的深度语境表征。
 ![模型框架](./images/模型框架图.png)
-- **MAE Encoder模块**:
-特征提取是多模态情感识别的基础，对模型表示原始情感数据的能力有重大影响。(待补充)
-<!-- ![MAE Encoder](./images/MAE%20Encoder.png) -->
-<img src="./images/MAE Encoder.png" alt="MAE" width="500"/>
-
-- **Bidirectional Dynamic Cross-model Attention模块**:
-(待补充, 图片需要调整)
-<img src="./images/BDCA-update.png" alt="BDCA" width="500"/>
+- **项目描述**:构建结合视觉与音频的多模态情感分析框架，有效捕捉视觉模态中的情感线索，同时能够自适应模态之间的融合，增强情感状态的预测。
+- **技术栈**：VGGish（音频特征）→ MAE（视觉特征）→ BDCA（自适应模态融合）→ Transform（序列建模）
+- **技术方案**：
+    - 构建基于掩码自编码器（MAE）的分层解耦机制，无需进行大规模面部图像预训练，实现面部特征与情感的语义空间对齐。
+    - 提出双向动态跨模态交叉注意力（BDCA）融合机制，能自适应不同模态之间的交互，有效实现多模态融合。
+- **成果表现**：
+    - 在效价维(Valence)和唤醒维(Arousal)的一致性相关系数分别达到0.605和0.658，优于目前先进的方法。
 
 ---
 
-### **第八届 ABAW 竞赛-基于Mamba的连续情感识别算法** | 2025.01-2025.04
-- **项目介绍**：针对Valence-Arousal Estimation Challenge任务, 聚焦于多模态情感与行为分析任务。对视频中的人脸序列进行连续效价(Valence)与唤醒度(Arousal)预测，评估指标为 Concordance Correlation Coefficient (CCC)。
+### **CVPR 2025 workshop算法竞赛-基于Mamba的连续情感识别算法** | 2025.01-2025.04
+- **算法描述**：针对Valence-Arousal Estimation Challenge任务, 聚焦于多模态情感与行为分析任务。对视频中的人脸序列进行连续效价(Valence)与唤醒度(Arousal)预测，评估指标为 Concordance Correlation Coefficient (CCC)。
 - **技术方案**: 
     - 采用 MAE (Masked Autoencoder) 提取高维视觉特征，并通过部分参数冻结策略增强泛化能力；
     - 引入 Temporal Convolutional Network (TCN) 建模短期依赖，捕捉局部动态信息；
     - 融合 Mamba (State Space Model) 进行长序列建模，实现全局情感趋势捕捉，同时兼顾计算效率与稳定性；
 - **成果表现**: 
     - 在 Aff-Wild2 数据集 上，测试集平均 CCC = 0.458，显著优于官方 Baseline。
+    - 相比Transform，Mamba的显存占用减少一半，实现轻量化推理能力。
     - 全球共有75支队伍参加, 获得第6名的成绩, 提出的方法被`CVPR 2025 Workshop`收录, 四个月论文被引用4次, 代码仓3个star。
 
 ---
 
 ## **学术成果**
 1. 📄 **Mamba-VA: A Mamba-based Approach for Continuous Emotion Recognition in Valence-Arousal Space**
-    - 第一作者, Conference on Computer Vision and Pattern Recognition Workshops(CVPRw)已发表
+    - 第一作者, Computer Vision and Pattern Recognition Workshops(CVPRw)已发表
     - [查看论文](./papers/Mamba-VA.pdf) 
     - 第八届 ABAW VA Estimation Challenge 提交队伍名称：Charon
     - [排行榜](https://affective-behavior-analysis-in-the-wild.github.io/8th/)
