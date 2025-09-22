@@ -98,7 +98,7 @@
     - [查看论文](./papers/LightMamba.pdf)
 
 3. 📄 **Enhancing Audio-Visual Affective Analysis via Bidirectional Dynamic Cross-Modal Attention and Masked Autoencoding**
-    - 第一作者, 2025 Wireless Communications and Signal Processing (WCSP)在投
+    - 第一作者, IEEE International Conference on Automatic Face and Gesture Recognition，在投
     - [查看论文](./papers/BidirectionalDynamicCross-ModalAttention.pdf)
 
 ---
